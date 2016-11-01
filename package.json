@@ -2,11 +2,17 @@
   "name": "recipe-box",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rkaramc.github.io/fcc-recipe-box",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rkaramc/fcc-recipe-box.git"
+  },
   "devDependencies": {
     "@kadira/storybook": "^2.5.2",
     "bootstrap-loader": "^2.0.0-beta.12",
     "bootstrap-sass": "^3.3.7",
     "css-loader": "^0.25.0",
+    "gh-pages": "^0.11.0",
     "imports-loader": "^0.6.5",
     "node-sass": "^3.10.1",
     "react-scripts": "0.7.0",
@@ -25,6 +31,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009",
