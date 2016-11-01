@@ -26,11 +26,14 @@ class Recipe extends Component {
         {this.state.showRecipe ?
           <div className="recipe-details panel-body">
             <RecipeDetails recipe={this.props.recipe} />
-            <span className="btn btn-danger"
-              onClick={this.onDelete}>Delete</span>
-            <span className="btn btn-default"
-              data-toggle="modal" data-target="#myModal"
-              onClick={this.onEdit}>Edit</span>
+            <div>
+              <span className="btn btn-danger"
+                onClick={this.onDelete}>Delete</span>
+              <span className="button-spacer">&nbsp;</span>
+              <span className="btn btn-default"
+                data-toggle="modal" data-target="#myModal"
+                onClick={this.onEdit}>Edit</span>
+            </div>
           </div>
           : null
         }

@@ -50,25 +50,35 @@ export class RecipeBox extends Component {
   render() {
     return (
       <div>
-        <RecipeList recipes={this.state.recipes}
-          onEdit={this.editRecipe}
-          onDelete={this.deleteRecipe}
-          />
-        <span className="btn btn-default"
-          onClick={this.addRecipe}
-          >Add Recipe</span>
-        {this.state.editing ?
-          <div>
-            <ModalContainer onClose={this.closeEditor}>
-              <ModalDialog onClose={this.closeEditor}>
-                <RecipeEditor key={this.state.editing.id}
-                  recipe={this.state.editing}
-                  onClose={this.closeEditor}
-                  onChange={this.onChange} />
-              </ModalDialog>
-            </ModalContainer>
+        <nav className="navbar navbar-default">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <a className="navbar-brand" href="#">Recipe Box</a>
+            </div>
+            <div className="navbar-header navbar-right">
+            <button type="button" className="btn btn-primary navbar-btn"
+              onClick={this.addRecipe}
+              >Add Recipe</button>
+            </div>
           </div>
-          : null}
+        </nav>
+        <div className="content-area">
+          <RecipeList recipes={this.state.recipes}
+            onEdit={this.editRecipe}
+            onDelete={this.deleteRecipe}
+            />
+          {this.state.editing ?
+            <div>
+              <ModalContainer onClose={this.closeEditor}>
+                <ModalDialog width="70%" onClose={this.closeEditor}>
+                  <RecipeEditor key={this.state.editing.id}
+                    recipe={this.state.editing}
+                    onChange={this.onChange} />
+                </ModalDialog>
+              </ModalContainer>
+            </div>
+            : null}
+        </div>
       </div>
     );
   }
