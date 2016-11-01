@@ -9,7 +9,7 @@
     "css-loader": "^0.25.0",
     "imports-loader": "^0.6.5",
     "node-sass": "^3.10.1",
-    "react-scripts": "0.4.3",
+    "react-scripts": "0.7.0",
     "resolve-url": "^0.2.1",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.2",
